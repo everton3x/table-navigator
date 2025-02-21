@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- You MUST include jQuery 3.4+ before Fomantic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.3/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.3/semantic.min.js"></script>
+
+    <script src="table-navigator.js"></script>
+</head>
+
+<body>
+
+    <button type="button" onclick="document.getElementById('table1').focus()">Table 1</button>
+
+    <!-- tabindex is required to enable focus on table with javascript or TAB -->
+    <table id="table1" class="ui celled table" tabindex="0">
+        <caption>Table 1</caption>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Notebook</td>
+                <td>R$ 4.500</td>
+            </tr>
+            <tr>
+                <td>Smartphone</td>
+                <td>R$ 1.200</td>
+            </tr>
+            <tr>
+                <td>Tablet</td>
+                <td>R$ 900</td>
+            </tr>
+            <tr>
+                <td>Smartwatch</td>
+                <td>R$ 800</td>
+            </tr>
+            <tr>
+                <td>Fones Bluetooth</td>
+                <td>R$ 250</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table2" class="ui celled table">
+        <thead>
+            <tr>
+                <th>Funcionário</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João Silva</td>
+                <td>TI</td>
+            </tr>
+            <tr>
+                <td>Maria Souza</td>
+                <td>RH</td>
+            </tr>
+            <tr>
+                <td>Carlos Pereira</td>
+                <td>Vendas</td>
+            </tr>
+            <tr>
+                <td>Ana Costa</td>
+                <td>Marketing</td>
+            </tr>
+            <tr>
+                <td>Pedro Rocha</td>
+                <td>Finanças</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const table1 = new TableNavigator('table1', 'active', 'blue colored left blue marked');
+        const table2 = new TableNavigator('table2', 'active', 'green colored left green marked');
+    </script>
+
+</body>
+
+</html>
